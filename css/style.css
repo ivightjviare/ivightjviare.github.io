@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* -- Basic Setting -- */
+body {
+	background:url("../images/pattern-1-5.jpg");
+	padding:100px 20px;
+}
+
+h2 {
+	color:blue;
+}
+
+#main-container {
+	width:800px;
+	padding:20px;
+	background:#ffffff;
+	margin:0 auto;
+	border-radius:20px;
+	box-shadow:0 8px 16px rgba(0,0,0,0.3);
+}
+
+#profile-pic {
+	width:160px;
+	height:160px;
+	border-radius:90px;
+	padding:10px;
+	box-sizing:border-box;
+	margin:-50px auto 0;
+	background:#ffffff;
+	box-shadow:0 8px 16px rgba(0,0,0,0.3);
+	transition-timing-function:ease-in-out;
+	transition:width 0.5s, height 0.5s, margin 0.5s;
+}
+
+#cp-header {
+	border-width:1px 0 1px 0;
+	border-color:#000000;
+}
+
+#profile-pic img {
+	border-radius:80px;
+	width:100%;
+}
+
+#profile-pic:hover {
+	width:180px;
+	height:180px;
+	margin:-60px auto 0;
+	transition-timing-function:ease-in-out;
+	transition:width 0.5s, height 0.5s, margin 0.5s;
+}
+
+.inner-line {
+	border-radius:10px;
+	border:solid 1px rgb(222,222,222);
+}
+
+/* -- Media Queries --*/
+
+/*Tablet Setting start here*/
+@media only screen and (min-width:768px) and (max-width:992px) {
+	
+}
+
+/*Mobile Setting start here*/
+@media only screen and (max-width:767px) {
+	
+}
