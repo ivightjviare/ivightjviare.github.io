@@ -3,20 +3,30 @@
 /* -- Basic Setting -- */
 body {
 	background:url("../images/pattern-1-5.jpg");
+	background-position:center center;
 	padding:100px 20px;
+	margin:0;
 }
 
-h2 {
-	color:blue;
+div, section, h2 {
+	transition-timing-function:ease-in-out;
+	transition-duration:0.2s;
+	transition-propery:width, height;
 }
 
-#main-container {
-	width:800px;
-	padding:20px;
-	background:#ffffff;
+/* -- Header Setting --*/
+#cp-header {
+	border-width:1px 0 1px 0;
+	border-color:#000000;
 	margin:0 auto;
-	border-radius:20px;
-	box-shadow:0 8px 16px rgba(0,0,0,0.3);
+	box-sizing:border-box;
+	display:flex;
+	justify-content:center;
+}
+
+#profile-pic img {
+	border-radius:80px;
+	width:100%;
 }
 
 #profile-pic {
@@ -25,29 +35,46 @@ h2 {
 	border-radius:90px;
 	padding:10px;
 	box-sizing:border-box;
-	margin:-50px auto 0;
+	z-index:10;
 	background:#ffffff;
 	box-shadow:0 8px 16px rgba(0,0,0,0.3);
-	transition-timing-function:ease-in-out;
-	transition:width 0.5s, height 0.5s, margin 0.5s;
 }
 
-#cp-header {
-	border-width:1px 0 1px 0;
-	border-color:#000000;
+#profile-name {
+	margin:0 0 0 30px;
+	z-index:12;
 }
 
-#profile-pic img {
-	border-radius:80px;
-	width:100%;
+#profile-name h2 {
+	font-family:Grape Nuts;
+	font-size:80px;
+	margin:-16px 0 0 -50px;
+	transform:rotate(-5deg) skewX(-10deg);
+	z-index:12;
+	text-align:center;
+	color:#6A3A80;
+	line-height:0.8em;
+	text-shadow:
+	1px 0px 0px #ffffff,
+	1px 1px 0px #ffffff,
+	0px 1px 0px #ffffff,
+	-1px 0px 0px #ffffff,
+	-1px -1px 0px #ffffff,
+	0px -1px 0px #ffffff,
+	2px 2px 0px #ffffff,
+	3px 3px 0px #ffffff,
+	3px 8px 10px rgba(0,0,0,0.3);
 }
 
-#profile-pic:hover {
-	width:180px;
-	height:180px;
-	margin:-60px auto 0;
-	transition-timing-function:ease-in-out;
-	transition:width 0.5s, height 0.5s, margin 0.5s;
+/* -- Main Setting --*/
+#main-container {
+	width:800px;
+	padding:20px;
+	background:#ffffff;
+	margin:50px auto 20px;
+	box-sizing:border-box;
+	border-radius:20px;
+	box-shadow:0 8px 16px rgba(0,0,0,0.3);
 }
 
 .inner-line {
@@ -55,14 +82,47 @@ h2 {
 	border:solid 1px rgb(222,222,222);
 }
 
+/* -- Footer Setting --*/
+
 /* -- Media Queries --*/
 
 /*Tablet Setting start here*/
 @media only screen and (min-width:768px) and (max-width:992px) {
-	
+	#main-container {
+		width:600px;
+	}
 }
 
 /*Mobile Setting start here*/
 @media only screen and (max-width:767px) {
 	
+	/*-- Basic Setting (Mobile) --*/
+	body {
+		padding:50px 10px;
+	}
+	
+	/*-- Header Setting (Mobile) --*/
+	#cp-header {
+		display:block;
+	}
+
+	#profile-pic {
+		margin:0 auto;
+	}
+	
+	#profile-name {
+		margin:0 auto;
+	}
+	
+	#profile-name h2 {
+		font-size:60px;
+		margin:-50px 0 0 0;
+	}
+	
+	/*-- Main Setting (Mobile) --*/
+	
+	#main-container {
+		width:300px;
+		margin:30px auto 20px;
+	}
 }
